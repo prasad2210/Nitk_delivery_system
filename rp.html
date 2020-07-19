@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration Page</title>
+    <link rel="stylesheet" type="text/css" href="css/rp.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row col-md-6 col-md-offset-3">
+        <div class="panel panel-primary">
+          <div class="panel-heading text-center">
+            <h1>Registration Form</h1>
+          </div>
+          <div class="panel-body">
+            <form action="registration.php" method="post">
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  name="firstName"
+                />
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastName"
+                  name="lastName"
+                />
+              </div>
+			  <div class="boxed">
+			     Note:
+				-For all the shop owners begin your username with "s" <br>
+				 -For all the customers begin your username with	"c"<br>
+				-Username can be a combination of variables and characters
+				</div>
+              <div class="form-group">
+                <label for="category">Category</label>
+                <div>
+                  <label for="Shop Owner" class="radio-inline"
+                    ><input
+                      type="radio"
+                      name="category"
+                      value="s"
+                      id="Shop Owner"
+                    />Shop Owner</label
+                  >
+                  <label for="Customer" class="radio-inline"
+                    ><input
+                      type="radio"
+                      name="category"
+                      value="c"
+                      id="Customer"
+                    />Customer</label
+                  >
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                />
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  name="password"
+                />
+              </div>
+              <div class="form-group">
+                <label for="username">Username</label>
+                <input
+                  type="varchar"
+                  class="form-control"
+                  id="username"
+                  name="username"
+                />
+              </div>
+              <input type="submit" class="btn btn-primary" />
+            </form>
+          </div>
+          <div class="panel-footer text-right">
+            <small>&copy; NITK</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

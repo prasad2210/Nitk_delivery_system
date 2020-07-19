@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>Login Form Design</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+	<script>
+		function sendusername() {
+			var uname = document.getElementById("username").value;
+			console.log(uname);
+			localStorage.setItem("username", uname);
+			return false;
+		};
+	</script>
+<body>
+    <div class="loginbox">
+    <img src="Images/avatar.png" class="avatar">
+        <h1>Login Here</h1>
+        <form action="../login.php" method="post">
+            <p>Username</p>
+            <input type="text" name="username" id="username" placeholder="Enter Username">
+            <p>Password</p>
+            <input type="password" name="password" placeholder="Enter Password">
+			<input type="submit" name="submit" value="Login" onclick="sendusername()">
+            <a href="rp.html">Don't have an account?</a></br>
+			<a href="contactus.html">Contact Us</a>
+        </form>
+       
+    </div>
+</body>
+</head>
+</html>

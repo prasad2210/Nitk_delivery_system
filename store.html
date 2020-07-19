@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		
+        <title>login</title>
+        <link rel="stylesheet" href="css/login1.css">
+        <script src = "javascript/login.js"></script>
+		<style>
+			.hidden{display:none !important;}
+		</style>
+		<script>
+				function getdata(){
+					document.getElementById("o_uname").value = localStorage.getItem("username");
+				}
+				function sendstorename() {
+					var uname = document.getElementById("storename").value;
+					console.log(storename);
+					localStorage.setItem("storename", uname);
+					return false;
+				};
+		</script>
+		</head>
+<body onload="getdata()">
+    
+    <div id="id01">
+       
+        <form id="p1" class="modal-content animate" action="store.php" method="post">
+          
+            
+          <div class="container">
+            <h1>NITK Delivery System</h1>
+			<input type="text" name="username" id="o_uname" class="hidden">
+			
+            <label for="storename"><b>Store Name</b></label>
+            <input type="text" placeholder="Enter storename" name="storename" id="storename" required>
+            <label for="psw"><b>Tell us about your store </b></label>
+            <textarea type="text" id="subject"  name="discription" placeholder="Enter Description"></textarea>
+             <button type="submit" class="next" onclick="sendstorename();" name="submit">Next</button>
+          </div>
+      
+          <div class="container" style="background-color:#f1f1f1">
+            
+            <button type="button" onclick="myFunction()" class="cancelbtn">Cancel</button>
+
+          </div>
+        </form>
+    </div>
+	
+</body>
+</html>

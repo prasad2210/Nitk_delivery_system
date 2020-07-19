@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/style_contactus.css" rel="stylesheet">
+</head>
+<body>
+
+<h2>National Institute of technolgy Karnataka,Surathkal</h2>
+<p> Email-registrar@nitk.ac.in  Phone-0824 247 4000</p>
+
+<div class="container">
+  <div style="text-align:center">
+    <h2>Contact Us</h2>
+    <p>Any queries ?leave us a message:)</p>
+  </div>
+  <div class="row">
+    <div class="column">
+      <img src="Images/contactus.jpg" style="width:100%">
+    </div>
+    <div class="column">
+      <form action="contact.php" method="post">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="fname" placeholder="Your first name..">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lname" placeholder="Your last name..">
+        <label for="country">Registration Id</label>
+		<input type="text" id="regid" name="regid" placeholder="Your college id">	
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
