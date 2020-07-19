@@ -3,10 +3,10 @@
 <head>
     <link rel="stylesheet" href="./css/custstore.css">
 	<script>
-		function getstorename(){
-			var storename = document.getElementsByClassName("card").value;
-			alert(storename);
-		}
+		//function getstorename(){
+			//var storename = document.getElementsByClassName("card").value;
+			//alert(storename);
+		//}
 		function addcart(){
 			alert('Product Added to cart');
 		}
@@ -46,12 +46,13 @@
 		<form action = "#" method="get">
 		Select Store Name:
 		<input type="text" name = "val1" id="val1"></input>
-		
+		<br></br>
 		
 		<input type="submit" value="Ok"></input>
 		</form>
 		 
 		<?php
+		$X = 1;
 		
 			$temp_var= htmlentities($_GET['val1']);
 		
@@ -68,17 +69,20 @@
 		if ($storename->num_rows > 0) {
 		// output data of each row			
 		 while($row = $storename->fetch_assoc()) { ?>
-			  <form class="card1" onclick="getstorename();" method="post">
-			  <input value="<?php echo $row["prod_name"];?>">
-			  <input value="<?php echo $row["quantity"];?>" name="quantity" class="hidden">
-			  <input value="<?php echo $row["id"];?>" name="id" class="hidden">
-			  <button name="submit" type="submit" class="addcart" >Add to Cart</button>
-			  </form>
-		 <?php 
-		 
-		 }}
-		 
+			  <div class="card1" onclick="getstorename();">
+			  <?php echo $row["prod_name"];?>
+			  <button class="addcart" onclick="addcart();">Add to Cart</button>
+			  </div>
+		 <?php }
 
+} else {
+		  echo "0 results";
+		}?>
+		</div>
+		  </div>
+		  
+		<?php $conn->close();
+	?>
 
 
 </body>
